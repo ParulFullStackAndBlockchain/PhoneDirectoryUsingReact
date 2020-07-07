@@ -1,16 +1,8 @@
 import React, {Component} from 'react';
 import Header from './Header.js';
-import './App.css';
+import './ShowSubscribers.css';
 
-class App extends React.Component {
-
-  constructor(){
-    super();
-    this.state ={
-      subscribersListToShow: []
-    }
-  }
-
+class ShowSubscribers extends React.Component {
   render() {
 
     return (
@@ -25,7 +17,7 @@ class App extends React.Component {
           </div>
 
           {
-            this.state.subscribersListToShow.map(sub => {
+            this.props.subscribersList.map(sub => {
             return <div key={sub.id} className="grid-container">
               <span className="grid-item">{sub.name}</span>
               <span className="grid-item">{sub.phone}</span>
@@ -41,4 +33,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default ShowSubscribers;
