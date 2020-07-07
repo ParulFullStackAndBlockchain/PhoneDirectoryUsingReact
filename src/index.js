@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import AddSubscriber from './AddSubscriber';
+import './common/common.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AddSubscriber />
   </React.StrictMode>,
   document.getElementById('root') 
 );
